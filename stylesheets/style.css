@@ -1,0 +1,13 @@
+/* Basic style sheet for github.io page */
+
+body {
+    font: "Liberation Sans";
+    font-size: 12pt;
+}
+
+h1 {
+    color: #7fdd80;
+    font-size: 20pt;
+    font-weight: "bold";
+}
+
