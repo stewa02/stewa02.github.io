@@ -1,7 +1,7 @@
 /* Basic style sheet for github.io page */
 
 body {
-    font: "Helvetica";
+    font-family: "Liberation Sans";
     font-size: 12pt;
 }
 
