@@ -8,6 +8,29 @@ body {
 h1 {
     color: #7fdd80;
     font-size: 20pt;
-    font-weight: "bold";
+    font-weight: bold;
+}
+
+h2 {
+    color: #7fdd80;
+    font-size: 16pt;
+    font-weight: bold;
+    font-style: italic;
+}
+
+td {
+    vertical-align: top;
+}
+
+.sidebar {
+    font-style: italic;
+    font-size: 12pt;
+}
+
+.codeblock {
+    font-family: "Liberation Mono";
+    font-size: 11pt;
+    background-color: #383838;
+    color: #fff;
 }
 

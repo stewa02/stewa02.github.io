@@ -1,0 +1,79 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<!-- HTML for sessionmanager.vim -->
+
+<html>
+    <head>
+        <title>stewa02's github project page</title>
+        <link rel="stylesheet" href="../stylesheets/style.css" type="text/css">
+    </head>
+
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <iframe src="../sidebar.html" frameborder="0" height="450"></iframe>
+                </td>
+                <td>
+                    <h1>sessionmanager.vim</h1>
+
+                    <h2>Introduction</h2>
+                    <p>
+                    sessionmanager.vim is a simple session management plugin for vim. It saves one,
+                    and only one session into your <span class="codeblock">~/.vim</span> directory when you close the editor and 
+                    loads the previous session in once you open vim again.
+                    </p>
+                    <p>
+                    When I searched for a simple vim session management solution, I didn't find a 
+                    plugin simple enough, but was inspired by some simpler solutions in a few lines
+                    of code that I found online, fixed some bugs and extended the 
+                    solution to work across different platforms and to better suit my preferences.
+                    </p>
+
+                    <h2>Usage</h2>
+                    <p>
+                    After copying the plugin file into the plugin folder, the plugin will 
+                    automatically start managing your session. The <span class="codeblock">.vim</span> or the <span class="codeblock">vimfiles</span> folder
+                    has to exist, because the plugin saves the session into this directory. It 
+                    saves you session when you leave the editor into <span class="codeblock">$VIMDIR/session.vim</span> and 
+                    reloads that session on startup. All new files from the command line (and 
+                    buffers that are not associated with any window) will be opened into a new tab.
+                    </p>
+                    <p>
+                    If you want to save the session manually you can use the command <span class="codeblock">SaveSession</span>
+                    and if you want to set an autocommand to another event you can do that as well
+                    (by default the session is only saved when the leave event is triggered, this 
+                    can be a problem if vim closes unexpectedly).
+                    </p>
+                    <p>
+                    That could look something like:
+                    <pre class="codeblock">
+augroup AddedSessionEvents
+    autocmd!
+    autocmd BufEnter * SaveSession
+augroup END
+                    </pre>
+                    </p>
+                    <p>
+                    If you for some reason want to load a session manually you can set up a mapping
+                    to the <span class="codeblock">RestoreSession</span> command, even if I don't see why you should want to do
+                    that.
+                    </p>
+                    <p>
+                    That could look something like:
+                    <pre class="codeblock">
+nnoremap <leader>r :RestoreSession<CR>
+                    </pre>
+                    </p>
+                    <p>
+                    At the moment the plugin is not configurable. Maybe this will change with my 
+                    personal usage or preferences.
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
+
