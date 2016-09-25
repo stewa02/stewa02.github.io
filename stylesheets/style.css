@@ -1,8 +1,8 @@
 /* Basic style sheet for github.io page */
 
 body {
-    font-family: "Liberation Sans";
-    font-size: 12pt;
+    font-family: sans-serif;
+    font-size: 11pt;
 }
 
 h1 {
@@ -24,13 +24,27 @@ td {
 
 .sidebar {
     font-style: italic;
-    font-size: 12pt;
+    font-size: 11pt;
+    padding-left: 14px;
+    margin-left: 14px;
 }
 
 .codeblock {
-    font-family: "Liberation Mono";
-    font-size: 11pt;
+    font-family: monospace;
+    font-size: 10pt;
     background-color: #383838;
     color: #fff;
+}
+
+table.layout {
+    width: 1000px;
+}
+
+.layoutleft {
+    width: 150px;
+}
+
+.layoutright {
+    width: 100%;
 }
 

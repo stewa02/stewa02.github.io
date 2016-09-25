@@ -11,12 +11,12 @@
     </head>
 
     <body>
-        <table>
+        <table class="layout">
             <tr>
-                <td>
+                <td class="layoutleft">
                     <iframe src="../sidebar.html" frameborder="0" height="450"></iframe>
                 </td>
-                <td>
+                <td class="layoutright">
                     <h1>sessionmanager.vim</h1>
 
                     <h2>Introduction</h2>
@@ -49,12 +49,12 @@
                     </p>
                     <p>
                     That could look something like:
-                    <pre class="codeblock">
+<pre class="codeblock">
 augroup AddedSessionEvents
     autocmd!
     autocmd BufEnter * SaveSession
 augroup END
-                    </pre>
+</pre>
                     </p>
                     <p>
                     If you for some reason want to load a session manually you can set up a mapping
@@ -63,9 +63,9 @@ augroup END
                     </p>
                     <p>
                     That could look something like:
-                    <pre class="codeblock">
+<pre class="codeblock">
 nnoremap <leader>r :RestoreSession<CR>
-                    </pre>
+</pre>
                     </p>
                     <p>
                     At the moment the plugin is not configurable. Maybe this will change with my 
